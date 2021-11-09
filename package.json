@@ -1,0 +1,22 @@
+{
+  "name": "sample-node",
+  "version": "1.0.0",
+  "description": "App Node simples para testes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luumarodrigues/sample-node.git"
+  },
+  "author": "@luumarodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luumarodrigues/sample-node/issues"
+  },
+  "homepage": "https://github.com/luumarodrigues/sample-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
