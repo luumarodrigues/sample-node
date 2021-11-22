@@ -23,7 +23,7 @@ jobs:
           # The password of the service principal
           service_principal_password: ${{secrets.SERVICE_PRINCIPAL_PASSWORD}}
           # The ACR tenant to use for login
-          # tenant: 
+          tenant: bc4e42e7-a36b-477e-a559-a37af92110c5
           # The ACR registry to use
           registry: DemoGithub
           # The ACR repository to use
