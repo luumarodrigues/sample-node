@@ -5,12 +5,26 @@ on: push #Especifica o evento que aciona automaticamente o arquivo do workflow
 
 jobs:
   build:
-    name: Build NodeJs Application
     runs-on: ubuntu-latest
     steps:
+      - name: Build Nodejs app
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
       - run: npm install
       - run: npm run build --if-present
+
+      - name: Microsoft Azure Container Registry Login
+      - uses: elgohr/acr-login-action@0.1
+        with:
+          # The ACR service principal to use for login
+          service_principal: ${{secrets.SERVICE_PRINCIPAL_PASSWORD}} 
+          # The password of the service principal
+          service_principal_password: ${{secrets.SERVICE_PRINCIPAL_PASSWORD}}
+          # The ACR tenant to use for login
+          # tenant: 
+          # The ACR registry to use
+          registry: DemoGithub
+          # The ACR repository to use
+          repository: sample-node
