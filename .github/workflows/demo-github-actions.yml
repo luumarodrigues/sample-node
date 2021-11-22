@@ -1,0 +1,17 @@
+name: demo-github-actions  
+#Opcional - Como o nome do workflow irá aparecer na aba actions do repositório de GitHub.
+
+on: push #Especifica o evento que aciona automaticamente o arquivo do workflow
+
+jobs:
+  build:
+    name: Build NodeJs Application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node v14
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm run build
+      
