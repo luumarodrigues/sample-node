@@ -9,4 +9,4 @@ app.get('/', (req, res) => {
 
 // no fim, iniciamos o serviço na porta 8001
 app.listen(8001)
-console.log('8001 é a porta mágica!')
+console.log('Olá! Essa é a Aplicação Node usada para testes..')
