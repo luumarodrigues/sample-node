@@ -1,4 +1,4 @@
-name: demo-github-actions  
+#name: demo-github-actions  
 #Opcional - Como o nome do workflow irá aparecer na aba actions do repositório de GitHub.
 
 on: push #Especifica o evento que aciona automaticamente o arquivo do workflow
