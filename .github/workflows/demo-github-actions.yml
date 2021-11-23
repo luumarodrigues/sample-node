@@ -19,11 +19,7 @@ jobs:
       run: npm install
 
     - name: ACR Login
-      uses: Azure/docker-login@v1
-      with:
-        username: ${{ secrets.SERVICE_PRINCIPAL }}
-        password: ${{ secrets.SERVICE_PRINCIPAL_PASSWORD }}
-        login-server: demogithub.azurecr.io
+      run: az acr login --name demogithub.azurecr.io --username ${{ secrets.ACR_USERNAME }} --password ${{ secrets.ACR_PASSWORD }}
     
     - name: Docker build
       run: docker build . -t demogithub.azurecr.io/node-web-app
