@@ -16,3 +16,5 @@ Felizmente temos um pacote npm que vai monitorar e reiniciar quando mudanças fo
 O -g significa que o pacote vai ser instalado globalmente no seu sistema.
 
 *$ npm install -g nodemon*
+
+#teste
